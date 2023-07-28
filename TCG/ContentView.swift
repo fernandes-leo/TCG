@@ -13,28 +13,31 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(setViewModel.sets) { set in
-                VStack(alignment: .leading) {
-                    if let imageURL = URL(string: set.images.symbol) {
+                HStack() {
+                    if let imageURL = URL(string: set.images.logo) {
                         // Use a função "AsyncImage" para carregar a imagem assincronamente
                         AsyncImage(url: imageURL) { image in
                             image
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
+                                .frame(width: 50, height: 50)
                         } placeholder: {
                             // Exibe um placeholder enquanto a imagem está sendo carregada
-                            Color.gray
-                                .frame(width: 80, height: 80)
+//                            Color.gray
+//                                .frame(width: 80, height: 80)
                         }
                     }
-
-                    Text(set.name)
-                        .font(.headline)
-                    Text(set.series)
-                        .font(.subheadline)
+                    Spacer()
+                    VStack(alignment: .center){
+                        Text(set.name)
+                            .font(.headline)
+                        Text(set.series)
+                            .font(.subheadline)
+                    }
+                    Spacer()
                 }
             }
-            .navigationTitle("Pokemon Sets")
+            .navigationTitle("Coleções")
         }
     }
 }

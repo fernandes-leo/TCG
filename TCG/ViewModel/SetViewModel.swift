@@ -27,9 +27,11 @@ class SetViewModel: ObservableObject {
                 do {
                     var decodedData = try JSONDecoder().decode(SetData.self, from: data)
                     // Ordenar os conjuntos pelo updatedAtDate (último para o primeiro)
-                    decodedData.data.sort(by: { $0.updatedAtDate > $1.updatedAtDate })
+                    decodedData.data.sort(by: { $0.releaseDate > $1.releaseDate })
+                    let filteredSets = decodedData.data.filter { $0.legalities.unlimited == "Legal" }
                     DispatchQueue.main.async {
                         self.sets = decodedData.data
+                        self.sets = filteredSets
                     }
                 } catch {
                     print("Error decoding JSON: \(error)")
