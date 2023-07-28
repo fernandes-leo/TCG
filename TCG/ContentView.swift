@@ -8,16 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var setViewModel = SetViewModel()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List(setViewModel.sets) { set in
+                VStack(alignment: .leading) {
+                    if let imageURL = URL(string: set.images.symbol) {
+                        // Use a função "AsyncImage" para carregar a imagem assincronamente
+                        AsyncImage(url: imageURL) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30, height: 30)
+                        } placeholder: {
+                            // Exibe um placeholder enquanto a imagem está sendo carregada
+                            Color.gray
+                                .frame(width: 80, height: 80)
+                        }
+                    }
+
+                    Text(set.name)
+                        .font(.headline)
+                    Text(set.series)
+                        .font(.subheadline)
+                }
+            }
+            .navigationTitle("Pokemon Sets")
         }
-        .padding()
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

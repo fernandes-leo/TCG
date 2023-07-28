@@ -11,6 +11,8 @@
 		A74F6F6C2A734B3C009A0119 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F6F6B2A734B3C009A0119 /* ContentView.swift */; };
 		A74F6F6E2A734B3C009A0119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74F6F6D2A734B3C009A0119 /* Assets.xcassets */; };
 		A74F6F712A734B3C009A0119 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74F6F702A734B3C009A0119 /* Preview Assets.xcassets */; };
+		A74F6F792A734CB6009A0119 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F6F782A734CB6009A0119 /* SetModel.swift */; };
+		A74F6F7C2A734D2C009A0119 /* SetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F6F7B2A734D2C009A0119 /* SetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		A74F6F6B2A734B3C009A0119 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A74F6F6D2A734B3C009A0119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A74F6F702A734B3C009A0119 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A74F6F782A734CB6009A0119 /* SetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
+		A74F6F7B2A734D2C009A0119 /* SetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		A74F6F682A734B3C009A0119 /* TCG */ = {
 			isa = PBXGroup;
 			children = (
+				A74F6F7A2A734D1F009A0119 /* ViewModel */,
+				A74F6F772A734C88009A0119 /* Model */,
 				A74F6F692A734B3C009A0119 /* TCGApp.swift */,
 				A74F6F6B2A734B3C009A0119 /* ContentView.swift */,
 				A74F6F6D2A734B3C009A0119 /* Assets.xcassets */,
@@ -65,6 +71,22 @@
 				A74F6F702A734B3C009A0119 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A74F6F772A734C88009A0119 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A74F6F782A734CB6009A0119 /* SetModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A74F6F7A2A734D1F009A0119 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A74F6F7B2A734D2C009A0119 /* SetViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A74F6F6C2A734B3C009A0119 /* ContentView.swift in Sources */,
+				A74F6F7C2A734D2C009A0119 /* SetViewModel.swift in Sources */,
+				A74F6F792A734CB6009A0119 /* SetModel.swift in Sources */,
 				A74F6F6A2A734B3C009A0119 /* TCGApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
